@@ -124,9 +124,26 @@ AUTH_USER_MODEL = 'users.CustomUser'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+import dj_database_url
+
+# Default local database configuration (for development)
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'task',            # Name of your local PostgreSQL database
+        'USER': 'postgres',        # Username for local database
+        'PASSWORD': '0000',        # Password for local database
+        'HOST': 'localhost',       # Localhost for development
+        'PORT': '5433',            # PostgreSQL port (adjust if different)
+    }
 }
+
+# Use DATABASE_URL from Heroku for production
+DATABASES['default'] = dj_database_url.config(
+    default=os.environ.get('DATABASE_URL'),  # Heroku will automatically set DATABASE_URL
+    conn_max_age=600,                        # Connection lifetime
+    ssl_require=True                          # Ensure SSL is used on Heroku (for security)
+)
 
 
 # Password validation
