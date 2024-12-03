@@ -125,7 +125,7 @@ AUTH_USER_MODEL = 'users.CustomUser'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://localhost:5432/mydb')
+    'default': dj_database_url.config(default='postgres://localhost:5433/mydb')
 }
 
 
