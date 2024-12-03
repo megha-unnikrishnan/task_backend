@@ -130,7 +130,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': '0000',
         'HOST': 'localhost',  # Set to 'localhost' for local development
-        'PORT': '5433',        # Default PostgreSQL port
+        'PORT': '5432',        # Default PostgreSQL port
     }
 }
 
