@@ -129,9 +129,14 @@ import dj_database_url
 # Default local database configuration (for development)
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'task',
+        'USER': 'postgres',
+        'PASSWORD': '0000',
+        'HOST': 'localhost',  # Set to 'localhost' for local development
+        'PORT': '5433',        # Default PostgreSQL port
+    }
 }
 
 
