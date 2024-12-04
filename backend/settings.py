@@ -75,6 +75,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://task-managemen-61cdd101e449.herokuapp.com",  # React's default port during development
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True 
+
 ROOT_URLCONF = 'backend.urls'
 
 from datetime import timedelta
