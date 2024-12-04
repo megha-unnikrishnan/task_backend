@@ -72,7 +72,7 @@ MIDDLEWARE = [
 
 # Allow requests from your React frontend
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React's default port during development
+    "https://task-managemen-61cdd101e449.herokuapp.com",  # React's default port during development
 ]
 
 ROOT_URLCONF = 'backend.urls'
